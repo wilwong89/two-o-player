@@ -23,7 +23,7 @@ class Game
         
         if @player_array[@turns % 2].lost_the_game()
           @continue = false
-          puts "Player #{(@turns + 1) % 2} wins with a score of #{@player_array[(@turns + 1) % 2].health}/#{@starting_health}"
+          puts "Player #{(@turns % 2) + 1} wins with a score of #{@player_array[(@turns + 1) % 2].health}/#{@starting_health}"
         end
       end
       puts "P1: #{@player_array[0].health}/#{@starting_health} vs P2: #{@player_array[1].health}/#{@starting_health}"
